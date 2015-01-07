@@ -246,9 +246,8 @@
 				
 	if ($enclosure = $item->get_enclosure())
 	{
-	foreach ((array) $enclosure->get_thumbnail(1) as $thumbnail)
-		$r.='<img src="'.$thumbnail.'"/>'."\n";
-	
+		foreach ((array) $enclosure->get_link() as $thumbnail)
+			$r.='<img src="'.$thumbnail.'"/>'."\n";
 	} 
 		
 		
